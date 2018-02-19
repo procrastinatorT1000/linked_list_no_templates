@@ -25,7 +25,7 @@ public:
 	};
 	~Elemen_c()
 	{
-		delete ptr;
+		delete (char *) ptr;
 		size = 0;
 	};
 	size_t getElement(void *outPtr)
@@ -112,21 +112,5 @@ public:
 		}
 	};
 };
-
-//typedef struct
-//{
-//	void *ptr;
-//	size_t size;
-//}Elemen;
-//
-//typedef struct Node
-//{
-//	Elemen element;
-//    struct Node *next;
-//} Node;
-
-//void push(Node **head, void *elemPtr, size_t elemSize);
-//size_t pop(Node **head, void *elemPtr);
-//void printLinkedList(const Node *head);
 
 #endif /* LINKED_LIST_HPP_ */
