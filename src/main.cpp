@@ -38,6 +38,7 @@ int main(void)
 	LinkedList Llist;
 
 	Llist.push(&dotA, sizeof(dotA));
+	Llist.push(&dotB, sizeof(dotB));
 	Llist.printLinkedList();
 
 

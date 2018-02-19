@@ -19,8 +19,7 @@ class Elemen_c
 public:
 	Elemen_c(void * data, size_t sz)
 	{
-		ptr = NULL;
-//		ptr = new(sz);
+		ptr = new char[sz];
 		memcpy(ptr, data, sz);
 		size = sz;
 	};
