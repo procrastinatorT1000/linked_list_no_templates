@@ -48,5 +48,10 @@ int main(void)
 	printf("dotC: x=%d y=%d z=%d\n", dotC.x, dotC.y, dotC.z);
 	Llist.printLinkedList();
 
+	Coordinate dotD;
+	dotD = *(Coordinate *)Llist[0];
+	printf("dotD: x=%d y=%d z=%d\n", dotD.x, dotD.y, dotD.z);
+	Llist.printLinkedList();
+
 	return EXIT_SUCCESS;
 }

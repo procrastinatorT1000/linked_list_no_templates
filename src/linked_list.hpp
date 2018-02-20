@@ -33,6 +33,11 @@ public:
 		memcpy(outPtr, ptr, size);
 		return size;
 	};
+	void *getDataPtr()
+	{
+		return ptr;
+	};
+
 	void printElement()
 	{
 		for(size_t i = 0; i < size; i++)
@@ -70,6 +75,10 @@ public:
 	{
 		return elementPtr->getElement(outPtr);
 	};
+	void *getElemDataPtr()
+	{
+		return elementPtr->getDataPtr();
+	};
 	void printElement()
 	{
 		elementPtr->printElement();
@@ -96,6 +105,7 @@ public:
 	};
 	void push(void *elem, size_t elemSize);
 	size_t pop(void *elemPtr);
+	void *operator[](const unsigned int idx);
 	void printLinkedList()
 	{
 		Node_c *printHead = head;

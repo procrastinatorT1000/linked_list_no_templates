@@ -11,7 +11,31 @@
 #include <stdio.h>
 #include <memory.h>
 
+void *LinkedList::operator[](const unsigned int idx)
+{
+	void *dataPtr = NULL;
 
+	if(head == NULL)
+	{
+		printf("Get index, list is empty\n");
+		return NULL;
+	}
+
+	Node_c *opHead = head;
+	unsigned int i = 0;
+	while(opHead)
+	{
+		if(i == idx)
+		{
+			dataPtr = opHead->getElemDataPtr();
+			break;
+		}
+		opHead = opHead->getNextNode();
+		i++;
+	}
+
+	return dataPtr;
+}
 
 void LinkedList::push(void *elem, size_t elemSize)
 {
