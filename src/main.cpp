@@ -49,9 +49,17 @@ int main(void)
 	Llist.printLinkedList();
 
 	Coordinate dotD;
-	dotD = *(Coordinate *)Llist[0];
-	printf("dotD: x=%d y=%d z=%d\n", dotD.x, dotD.y, dotD.z);
-	Llist.printLinkedList();
+
+	try{
+		dotD = *(Coordinate *)Llist[1];
+		printf("dotD: x=%d y=%d z=%d\n", dotD.x, dotD.y, dotD.z);
+		Llist.printLinkedList();
+	}
+	catch(unsigned int aaa)
+	{
+		printf("Invalid index %d\n", aaa);
+	}
+
 
 	return EXIT_SUCCESS;
 }

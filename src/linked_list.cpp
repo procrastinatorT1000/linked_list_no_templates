@@ -18,7 +18,6 @@ void *LinkedList::operator[](const unsigned int idx)
 	if(head == NULL)
 	{
 		printf("Get index, list is empty\n");
-		return NULL;
 	}
 
 	Node_c *opHead = head;
@@ -32,6 +31,11 @@ void *LinkedList::operator[](const unsigned int idx)
 		}
 		opHead = opHead->getNextNode();
 		i++;
+	}
+
+	if(dataPtr == NULL)
+	{
+		throw(idx);
 	}
 
 	return dataPtr;
